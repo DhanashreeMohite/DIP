@@ -7,7 +7,7 @@ import imp
 from resizeimage import resizeimage
 import time
 
-image = cv2.imread('potato.jpg')
+image = cv2.imread('baboon.jpg')
 image = np.array(image)
 
 start = time.time()
