@@ -2,10 +2,10 @@
 Algorithm:
 Feature space: (L,u,v,x,y) Intensity + (u,v)
 color channels + Position in image (x,y)
-â€¢ Apply meanshift in the 5-dimensional space
-â€¢ For each pixel (xi,yi) of intensity Li and color
+• Apply meanshift in the 5-dimensional space
+• For each pixel (xi,yi) of intensity Li and color
 (ui,vi), find the corresponding mode ck
-â€¢ All of the pixel (xi,yi) corresponding to the same
+• All of the pixel (xi,yi) corresponding to the same
 mode ck are grouped into a single region
 '''
 
@@ -28,9 +28,9 @@ import time
 import cv2
 
 
-image = cv2.imread('jerry.jpg')
+image = cv2.imread('baboon.jpg')
 #image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
-h = 100 #100 not working
+h = 60 #100 not working
 tolerance = 10
     
 start = time.time()
@@ -127,4 +127,3 @@ plt.figure(figsize=(10,5))
 plt.imshow(segmentImage)
 plt.title("Segmented Image")
 plt.show()
-
